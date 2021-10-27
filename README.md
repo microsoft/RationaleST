@@ -10,6 +10,12 @@ As the maintainer of this project, please make a few updates:
 - Understanding the security reporting process in SECURITY.MD
 - Remove this section from the README
 
+To run the code:
+python run_st_rationale.py --task ../data/<dataset> --model_dir <output_dir>  --seq_len 512 --sample_scheme uniform --sup_labels 200 --valid_split 0.5 --pt_teacher TFBertModel --pt_teacher_checkpoint bert-base-uncased --N_base 3 --sup_batch_size 4 --sup_epochs 100 --unsup_epochs 20 --model_type joint_neg_rwt_l_r_fine_tune_teacher 
+  
+Add --do_pairwise for evidence and boolq dataset
+
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
