@@ -4,8 +4,11 @@ Self-training with Few-shot Rationalization is a multi-task learning based frame
 
 Our paper was published at EMNLP 2021. The link to the paper can be found here: [Self-training with Few-shot Rationalization: Teacher Explanations Aid Student in Few-shot NLU](https://arxiv.org/pdf/2109.08259.pdf)
 
-## Using the code
+## Using the Code
 
+### Installing the dependencies
+
+To run the code, please install the packages from ```requirements.txt``` using the command: ``` pip install -r requirements.txt```
 
 To run the code:
 ```
