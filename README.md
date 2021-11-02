@@ -1,14 +1,11 @@
-# Project
+# Self-training with Few-shot Rationalization
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+Self-training with Few-shot Rationalization is a multi-task learning based framework based on self-training language models with few labels for task and rationales.
 
-As the maintainer of this project, please make a few updates:
+Our paper was published at EMNLP 2021. The link to the paper can be found here: [Self-training with Few-shot Rationalization: Teacher Explanations Aid Student in Few-shot NLU](https://arxiv.org/pdf/2109.08259.pdf)
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+## Using the code
+
 
 To run the code:
 ```
