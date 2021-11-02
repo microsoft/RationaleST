@@ -1,6 +1,6 @@
 # Self-training with Few-shot Rationalization
 
-Self-training with Few-shot Rationalization is a multi-task learning based framework based on self-training language models with few labels for task and rationales.
+Self-training with Few-shot Rationalization is a multi-task learning (MTL) based framework based on self-training language models with few labels for task and rationales.
 
 Our paper was published at EMNLP 2021. The link to the paper can be found here: [Self-training with Few-shot Rationalization: Teacher Explanations Aid Student in Few-shot NLU](https://arxiv.org/pdf/2109.08259.pdf)
 
@@ -16,14 +16,13 @@ Datasets used in this paper are from ERASER benchmark. The datasets can be downl
 
 ### Training our model
 
-
-
 To run the code:
 ```
-python run_st_rationale.py --task ../data/<dataset> --model_dir <output_dir>  --seq_len 512 --sample_scheme uniform --sup_labels 200 --valid_split 0.5 --pt_teacher TFBertModel --pt_teacher_checkpoint bert-base-uncased --N_base 3 --sup_batch_size 4 --sup_epochs 100 --unsup_epochs 20 --model_type joint_neg_rwt_l_r_fine_tune_teacher 
+python run_st_rationale.py --task <dataset_dir> --model_dir <output_dir>  --seq_len 512 --sample_scheme uniform --sup_labels 200 --valid_split 0.2 --pt_teacher TFBertModel --pt_teacher_checkpoint bert-base-uncased --N_base 3 --sup_batch_size 8 --sup_epochs 70 --unsup_epochs 20 --model_type joint_neg_rwt_l_r_fine_tune_teacher 
 ```
 Add --do_pairwise for evidence and boolq dataset
 
+*Model type*: Option *model_type*: ```joint_neg``` (MTL framework without reweighting), ```joint_neg_rwt_l_r``` (MTL framework with reweighting), ```joint_neg_rwt_l_r_fine_tune_teacher``` (MTL framework with reweighting and fine-tuning teacher)
 
 ## Contributing
 
