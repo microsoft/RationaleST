@@ -20,9 +20,13 @@ To run the code:
 ```
 python run_st_rationale.py --task <dataset_dir> --model_dir <output_dir>  --seq_len 512 --sample_scheme uniform --sup_labels 200 --valid_split 0.2 --pt_teacher TFBertModel --pt_teacher_checkpoint bert-base-uncased --N_base 3 --sup_batch_size 8 --sup_epochs 70 --unsup_epochs 20 --model_type joint_neg_rwt_l_r_fine_tune_teacher 
 ```
-Add --do_pairwise for evidence and boolq dataset
+*Classification tasks*: Set --do_pairwise for evidence and boolq dataset
 
 *Model type*: Option *model_type*: ```joint_neg``` (MTL framework without reweighting), ```joint_neg_rwt_l_r``` (MTL framework with reweighting), ```joint_neg_rwt_l_r_fine_tune_teacher``` (MTL framework with reweighting and fine-tuning teacher)
+
+*Training and validation*: ```sup_labels``` denote the total number of available labeled examples for each class, where ```valid_split``` uses a fraction of those labels as validation set for early stopping. Set ```sup_labels``` to -1 to use all training labels. Set ```valid_split``` to -1 to use the available test data as the validation set.
+
+*Fine-tuning batch size*: Set ```sup_batch_size``` to a small number for few-shot fine-tuning of the teacher model. In case of many training labels, set ```sup_batch_size``` to a higher value for faster training.
 
 ## Contributing
 
