@@ -1,3 +1,8 @@
+"""
+Code for Self-training for Rationale using few-shot learning.
+This code base is adapted from ERASER (https://github.com/jayded/eraserbenchmark)
+"""
+
 import json
 import os
 
