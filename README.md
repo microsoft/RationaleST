@@ -28,6 +28,12 @@ python run_st_rationale.py --task <dataset_dir> --model_dir <output_dir>  --seq_
 
 *Fine-tuning batch size*: Set ```sup_batch_size``` to a small number for few-shot fine-tuning of the teacher model. In case of many training labels, set ```sup_batch_size``` to a higher value for faster training.
 
+*Task name*: Option ```task``` Provide the inout dataset directory for training.
+
+*HuggingFace Transformers*: To use different pre-trained language models from HuggingFace, set pt_teacher and pt_teacher_checkpoint to corresponding model versions available from [here](https://huggingface.co/transformers/pretrained_models.html). A default set of pre-trained language models is available at ```huggingface_utils.py```.
+
+
+
 ### Contact
 
 For questions, please contact [Meghana Bhat](https://meghu2791.github.io)
