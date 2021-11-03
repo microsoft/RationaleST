@@ -28,6 +28,10 @@ python run_st_rationale.py --task <dataset_dir> --model_dir <output_dir>  --seq_
 
 *Fine-tuning batch size*: Set ```sup_batch_size``` to a small number for few-shot fine-tuning of the teacher model. In case of many training labels, set ```sup_batch_size``` to a higher value for faster training.
 
+### Contact
+
+For questions, please contact [Meghana Bhat](https://meghu2791.github.io)
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
