@@ -1,3 +1,6 @@
 tensorflow-gpu
 sklearn
 transformers
+nltk
+tensorflow-addons
+focal-loss
