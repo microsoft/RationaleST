@@ -32,7 +32,21 @@ python run_st_rationale.py --task <dataset_dir> --model_dir <output_dir>  --seq_
 
 *HuggingFace Transformers*: To use different pre-trained language models from HuggingFace, set pt_teacher and pt_teacher_checkpoint to corresponding model versions available from [here](https://huggingface.co/transformers/pretrained_models.html). A default set of pre-trained language models is available at ```huggingface_utils.py```.
 
+### Citation
 
+If you find our paper useful, please cite the following:
+
+```
+@InProceedings{bhat2021self-training,
+author = {Bhat, Meghana Moorthy and Sordoni, Alessandro and Mukherjee, Subhabrata (Subho)},
+title = {Self-training with Few-shot Rationalization: Teacher Explanations Aid Student in Few-shot NLU},
+booktitle = {EMNLP 2021},
+year = {2021},
+month = {November},
+abstract = {While pre-trained language models have obtained state-of-the-art performance for several natural language understanding tasks, they are quite opaque in terms of their decision-making process. While some recent works focus on rationalizing neural predictions by highlighting salient concepts in text as justifications or rationales, they rely on thousands of labeled training examples for both task labels as well as annotated rationales for every instance. Such extensive large-scale annotations are infeasible to obtain for many tasks. To this end, we develop a multi-task teacher-student framework based on self-training pre-trained language models with limited task-specific labels and rationales and judicious sample selection to learn from informative pseudo-labeled examples. We study several characteristics of what constitutes a good rationale and demonstrate that the neural model performance can be significantly improved by making it aware of its rationalized predictions particularly in low-resource settings. Extensive experiments in several benchmark datasets demonstrate the effectiveness of our approach.},
+url = {https://www.microsoft.com/en-us/research/publication/self-training-with-few-shot-rationalization/},
+}
+```
 
 ### Contact
 
